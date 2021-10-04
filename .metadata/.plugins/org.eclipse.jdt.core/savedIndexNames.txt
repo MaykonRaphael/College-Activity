@@ -12,5 +12,6 @@ INDEX VERSION 1.131+D:\mraph\Documents\Engenharia\6° Semestre\POO\lista1\.metada
 3536615003.index
 3347860802.index
 643275650.index
+1291266581.index
 2504911426.index
 631665883.index

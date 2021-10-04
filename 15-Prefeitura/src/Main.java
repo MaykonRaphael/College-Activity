@@ -18,12 +18,17 @@ public class Main {
 		int children[] =new int[TAM], choice;
 		double wage[] = new double[TAM];
 		
-		for( int i = 0; i < TAM; i++ ) {
-			wage[i] = Double.parseDouble(JOptionPane.showInputDialog("Digite o salario da pessoa " + (i+1)));
-			children[i] = Integer.parseInt(JOptionPane.showInputDialog("Digite quantos(as) filhos(as) tem a pessoa " + (i+1)));
-		}
-		
-		calculateAvarege(wage, children);
+		do {
+			for( int i = 0; i < TAM; i++ ) {
+				wage[i] = Double.parseDouble(JOptionPane.showInputDialog("Digite o salario da pessoa " + (i+1)));
+				children[i] = Integer.parseInt(JOptionPane.showInputDialog("Digite quantos(as) filhos(as) tem a pessoa " + (i+1)));
+			}
+			
+			calculateAvarege(wage, children);
+			
+			choice = JOptionPane.showConfirmDialog(null, "Deseja executar novamente?");
+			
+		} while( choice == JOptionPane.YES_OPTION );
 
 	}
 
