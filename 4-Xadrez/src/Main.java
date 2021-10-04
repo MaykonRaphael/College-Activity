@@ -8,17 +8,22 @@ public class Main {
 //		tempo máximo de duração do jogo é de 24 horas e que o jogo pode iniciar em um dia
 //		e terminar no dia seguinte.
 		
-		int startTime, endTime;
+		int startTime, endTime, choice;
 		
 		do {
-			startTime = setStartTime();
-			showInvalidMessage(startTime);
+			do {
+				startTime = setStartTime();
+				showInvalidMessage(startTime);
+				
+			} while( startTime < 0 && startTime > 24 );
 			
-		} while( startTime < 0 && startTime > 24 );
-		
-		endTime = setEndTime();
-		
-		calculateGameTime(startTime, endTime);
+			endTime = setEndTime();
+			
+			calculateGameTime(startTime, endTime);
+	
+			choice = JOptionPane.showConfirmDialog(null, "Deseja executar novamente?");
+			
+		} while( choice == JOptionPane.YES_OPTION );
 
 	}
 

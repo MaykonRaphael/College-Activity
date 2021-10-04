@@ -7,13 +7,19 @@ public class Main {
 //		escrever se formam ou não um triângulo. OBS: para formar um triângulo, o valor de
 //		cada lado deve ser menor que a soma dos outros 2 lados.
 
+		int choice;
 		double A, B, C;
 		
-		A = setA();
-		B = setB();
-		C = setC();
-		
-		verifyTriangle(A,B,C);
+		do {
+			A = setA();
+			B = setB();
+			C = setC();
+			
+			verifyTriangle(A,B,C);
+	
+			choice = JOptionPane.showConfirmDialog(null, "Deseja executar novamente?");
+			
+		} while( choice == JOptionPane.YES_OPTION );
 
 	}
 

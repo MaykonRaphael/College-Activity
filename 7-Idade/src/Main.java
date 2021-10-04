@@ -10,20 +10,25 @@ public class Main {
 //		Calcule e escreva a soma das idades do homem mais velho com a mulher mais nova,
 //		e o produto das idades do homem mais novo com a mulher mais velha.
 		
-		int menAge[] = new int[2], womenAge[] = new int[2];
+		int menAge[] = new int[2], womenAge[] = new int[2], choice;
 		
-		setMenAge(menAge);
-		setWomenAge(womenAge);
-		
-		JOptionPane.showMessageDialog(null, "Soma das idades!"
-										+ "\nIdade Homem mais velho: " + menAge[1] + " anos"
-										+ "\nIdade Mulher mais nova: " +womenAge[0] + " anos"
-										+ "\nTotal: " + (menAge[1] + womenAge[0]) + " anos");
-
-		JOptionPane.showMessageDialog(null, "Produto da idade do homem mais novo com a mulher mais velha!"
-										+ "\nIdade Homem mais novo: " + menAge[0] + " anos"
-										+ "\nIdade Mulher mais velha: " +womenAge[1] + " anos"
-										+ "\nTotal: " + (menAge[0] * womenAge[1]) + " anos");
+		do {
+			setMenAge(menAge);
+			setWomenAge(womenAge);
+			
+			JOptionPane.showMessageDialog(null, "Soma das idades!"
+											+ "\nIdade Homem mais velho: " + menAge[1] + " anos"
+											+ "\nIdade Mulher mais nova: " +womenAge[0] + " anos"
+											+ "\nTotal: " + (menAge[1] + womenAge[0]) + " anos");
+	
+			JOptionPane.showMessageDialog(null, "Produto da idade do homem mais novo com a mulher mais velha!"
+											+ "\nIdade Homem mais novo: " + menAge[0] + " anos"
+											+ "\nIdade Mulher mais velha: " +womenAge[1] + " anos"
+											+ "\nTotal: " + (menAge[0] * womenAge[1]) + " anos");
+	
+			choice = JOptionPane.showConfirmDialog(null, "Deseja executar novamente?");
+			
+		} while( choice == JOptionPane.YES_OPTION );
 
 	}
 

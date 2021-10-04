@@ -9,17 +9,22 @@ public class Main {
 //		carros por ele vendidos, o valor total de suas vendas, o salário fixo e o valor que ele
 //		recebe por carro vendido. Calcule e escreva o salário final do vendedor.
 
-		int soldCars;
+		int soldCars, choice;
 		double wage, commission, totalSold;
-
-		wage = setWage();
-		commission = setCommission();
-		soldCars = setSoldCars();
-		totalSold = setTotalSold();
 		
-		commission /= 100;
-		
-		totalWage(wage, commission, soldCars, totalSold);
+		do {
+			wage = setWage();
+			commission = setCommission();
+			soldCars = setSoldCars();
+			totalSold = setTotalSold();
+			
+			commission /= 100;
+			
+			totalWage(wage, commission, soldCars, totalSold);
+	
+			choice = JOptionPane.showConfirmDialog(null, "Deseja executar novamente?");
+			
+		} while( choice == JOptionPane.YES_OPTION );
 
 	}
 

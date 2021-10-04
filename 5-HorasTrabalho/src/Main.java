@@ -10,12 +10,18 @@ public class Main {
 //		que deverá ser acrescido das horas extras, caso tenham sido trabalhadas (considere
 //		que o mês possua 4 semanas exatas).
 		
+		int choice;
 		double timeMonthWork, hourWage;
 		
-		timeMonthWork = setTimeMonthWork();
-		hourWage = setHourWage();
-		
-		calculateExtraHour(timeMonthWork,hourWage);
+		do {
+			timeMonthWork = setTimeMonthWork();
+			hourWage = setHourWage();
+			
+			calculateExtraHour(timeMonthWork,hourWage);
+	
+			choice = JOptionPane.showConfirmDialog(null, "Deseja executar novamente?");
+			
+		} while( choice == JOptionPane.YES_OPTION );
 
 	}
 
