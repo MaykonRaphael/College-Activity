@@ -29,7 +29,7 @@ public class Main {
 
 	private static void calculePriceAndAvarage(int[] id, double[] price, double avarege) {
 		Arrays.sort(price);
-		JOptionPane.showMessageDialog(null, "Maior preço lido foi R$" + price[14]);
+		JOptionPane.showMessageDialog(null, "Maior preço lido foi R$" + price[price.length-1]);
 		JOptionPane.showMessageDialog(null, "A média aritimética dos preços é: R$" + (avarege / 15));
 		
 	}
